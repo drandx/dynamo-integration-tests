@@ -1,0 +1,48 @@
+{
+  "name": "dynamo-int-testing",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "tsc": "tsc",
+    "test": "npm run test-only",
+    "test-only": "jest --coverage",
+    "test:watch": "jest --watch"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/node": "=11.11.1",
+    "aws-sdk": "=2.419.0",
+    "tslib": "^1.9.3"
+  },
+  "devDependencies": {
+    "@types/jest": "=24.0.11",
+    "ts-jest": "=24.0.0",
+    "jest": "=24.4.0",
+    "typescript": "=3.3.3333"
+  },
+  "jest": {
+    "globals": {
+      "__TEST__": "test"
+    },
+    "testEnvironment": "node",
+    "transform": {
+      ".(ts|tsx)": "ts-jest"
+    },
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json"
+    ],
+    "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(ts|tsx|js)$",
+    "coverageDirectory": "coverage",
+    "collectCoverageFrom": [
+      "src/**/*.{ts,tsx,js,jsx}",
+      "!src/**/*.d.ts"
+    ]
+  }
+}
