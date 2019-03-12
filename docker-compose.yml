@@ -1,0 +1,20 @@
+version: '3.1'
+
+services:
+
+  mysql:
+    image: mysql:5.6
+    command: --default-authentication-plugin=mysql_native_password
+    restart: always
+    volumes:
+      - ./mysql-dump:/docker-entrypoint-initdb.d
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpass
+      MYSQL_DATABASE: test_dev_fl_placement
+    ports:
+      - 3308:3306
+  
+  dynamo:
+    image: amazon/dynamodb-local
+    ports:
+      - 8000:8000

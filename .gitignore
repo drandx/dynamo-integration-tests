@@ -8,3 +8,4 @@ aws-creds
 build.json
 codeship.aes
 coverage
+mysql-dump
