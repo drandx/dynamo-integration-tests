@@ -11,7 +11,7 @@
     "test:watch": "jest --watch"
   },
   "author": "",
-  "license": "ISC",
+  "license": "",
   "dependencies": {
     "@types/node": "=11.11.1",
     "aws-sdk": "=2.419.0",
