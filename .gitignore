@@ -9,3 +9,4 @@ build.json
 codeship.aes
 coverage
 mysql-dump
+\.DS_Store
