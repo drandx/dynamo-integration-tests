@@ -1,7 +1,10 @@
 import * as AWS from 'aws-sdk';
 
 export const dynamoConnection = new AWS.DynamoDB({
-    endpoint: process.env.DB_END_POINT
+    endpoint: process.env.DB_END_POINT,
+    region: process.env.AWS_API_REGION,
+    accessKeyId: 'mocked',
+    secretAccessKey: 'mocked',
 });
 
 var params = {
