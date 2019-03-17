@@ -8,4 +8,7 @@ COPY . .
 
 RUN npm install
 
+RUN npm run build
+
 RUN chmod -R 777 /home/dynamo-int-testing/
+

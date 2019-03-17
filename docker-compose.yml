@@ -25,8 +25,8 @@ services:
   run-test:
     build:
       context: .
-      dockerfile: ./codeship/Dockerfile
-    command: sh ./runTests.sh
+      dockerfile: Dockerfile
+    command: /bin/sh -c "node ./dist/src/config/dbInitializer.js && ./node_modules/.bin/jest"
     environment:
       AWS_API_REGION: us-east-1
       STAGE: test

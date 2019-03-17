@@ -19,7 +19,7 @@ dynamodb:
 
 codeship-deployment:
   build:
-    path: ./codeship
+    path: .
     dockerfile_path: Dockerfile
   environment:
     AWS_API_REGION: us-east-1
@@ -27,6 +27,6 @@ codeship-deployment:
     AWS_API_ACCESS_KEY: mocked
     AWS_API_SECRET_KEY: mocked
     DB_END_POINT: http://dynamodb:8000/
-  depends_on:
+  links:
     - mysql
     - dynamodb
