@@ -1,0 +1,10 @@
+- name: Run MySQL
+  service: mysql
+  command: --default-authentication-plugin=mysql_native_password
+
+- name: Run DynamoDB
+  service: dynamodb
+
+- name: Run Integration Tests
+  service: codeship-deployment
+  command: /home/dynamo-int-testing/runTests.sh

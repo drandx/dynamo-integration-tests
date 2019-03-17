@@ -25,7 +25,7 @@ services:
   run-test:
     build:
       context: .
-      dockerfile: Dockerfile
+      dockerfile: ./codeship/Dockerfile
     command: sh ./runTests.sh
     environment:
       AWS_API_REGION: us-east-1
