@@ -27,6 +27,6 @@ codeship-deployment:
     AWS_API_ACCESS_KEY: mocked
     AWS_API_SECRET_KEY: mocked
     DB_END_POINT: http://dynamodb:8000/
-  links:
+  depends_on:
     - mysql
     - dynamodb
