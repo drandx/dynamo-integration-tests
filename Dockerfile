@@ -1,4 +1,4 @@
-FROM node:8
+FROM lambci/lambda:nodejs8.10
 
 RUN echo $STAGE
 
