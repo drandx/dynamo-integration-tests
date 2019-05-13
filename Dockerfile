@@ -1,5 +1,9 @@
 FROM node:8
 
+RUN echo "**** PRINTING ENV VARS: "
+
+RUN printenv
+
 RUN echo $STAGE
 
 RUN mkdir /home/dynamo-int-testing
